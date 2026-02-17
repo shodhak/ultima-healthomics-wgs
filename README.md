@@ -8,10 +8,11 @@
 
 Ultima Genomics WGS data is not your typical sequencing workload. The combination of extremely large CRAM files, a split-container DeepVariant implementation, and tight coupling between containers and vendor-supplied workflow definitions creates a stack of compounding challenges that only reveal themselves at production scale.
 
-Early experiments with small datasets tend to succeed — and that's the trap. The assumptions that hold at 10 GB collapse spectacularly once inputs exceed 100 GB and workflows must run unattended overnight.
+Early experiments with small datasets tend to succeed. The assumptions that hold at 10 GB collapse once inputs exceed 100 GB and workflows must run unattended overnight.
 
 This post captures the architectural decisions, concrete failure modes, and exact fixes required to get this right.
 
+![Automation Strategy](./automation.png)
 ---
 
 ## Why Direct EC2 Execution Failed
