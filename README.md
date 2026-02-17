@@ -1,4 +1,4 @@
-# Running Ultima Genomics WGS Variant Calling on AWS HealthOmics: A Production War Story
+# Running Ultima Genomics WGS Variant Calling on AWS HealthOmics
 
 > **TL;DR:** Direct EC2 execution of Ultima split containers doesn't work at scale. This post documents every failure mode we hit processing 100–200+ GB CRAM files, and the exact configuration that finally made the workflow reliable and repeatable on AWS HealthOmics.
 
